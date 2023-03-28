@@ -317,7 +317,7 @@ export const api = {
     },
     schools: {
         search: (query: string): AxiosPromise<AppTypes.School[]> => {
-            return endpoint.get(`/schools/?query=${encodeURIComponent(query)}`);
+            return endpoint.get(`/schools/?query=${encodeURIComponent(query)}&limit=3`);
         },
         getByUrn: (urn: string): AxiosPromise<AppTypes.School[]> => {
             return endpoint.get(`/schools/?urn=${encodeURIComponent(urn)}`);
